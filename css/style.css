@@ -25,7 +25,7 @@ html {
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
-    --fs-h3: 1.25rem;
+    --fs-h3: 1.3rem;
     --fs-body: 1rem;
 
     --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25), 0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
@@ -312,6 +312,7 @@ header {
 .section__title--services {
     color: var(--clr-titre);
     position: relative;
+    font-size: var(--fs-h2);
 }
 
 .section__title--services::after {
@@ -331,6 +332,35 @@ header {
 .service {
     max-width: 500px;
     margin: 0 auto;
+    font-size: 1.18em;
+    font-weight: 400;
+}
+
+.techno {
+    display: block;
+    justify-content: center;
+    justify-self: center;
+}
+
+.techno__item {
+    border-radius: 12%;
+    background-color: #C0C0C0;
+    margin-right: .5em;
+    margin-left: .5em;
+    color: var(--clr-dark);
+    font-family: var(--ff-secondary);
+    text-decoration: none;
+    padding-left: .25em;
+    padding-right: .25em;
+}
+
+.formation {
+    color: var(--clr-titre);
+}
+
+.star {
+    color: var(--clr-titre);
+    font-size: var(--fs-h3);
 }
 
 @media (min-width:800px) {
@@ -535,7 +565,7 @@ footer {
     max-width: 450px;
 }
 
-@media (max-width:650px) {
+@media (max-width:680px) {
     .voir-cv {
         display: none;
     }
