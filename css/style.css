@@ -145,6 +145,7 @@ h3 {
     font-family: var(--ff-secondary);
     padding: 0.25em;
     margin-bottom: 1em;
+    text-align: center;
 }
 
 header {
