@@ -8,6 +8,16 @@ html {
     scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: var(--clr-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--clr-accent);
+    border-radius: 10%;
+}
+
 :root {
     --ff-primary: 'Poppins', sans-serif;
     --ff-secondary: 'Open Sans', sans-serif;
@@ -343,8 +353,8 @@ header {
 }
 
 .techno__item {
-    border-radius: 12%;
-    background-color: #C0C0C0;
+    border-radius: 8%;
+    background-color: var(--clr-accent);
     margin-right: .5em;
     margin-left: .5em;
     color: var(--clr-dark);
@@ -461,14 +471,44 @@ footer {
 .portfolio__item {
     background: #7699d4;
     overflow: hidden;
-    max-width: 509px;
+    max-width: 510px;
+    aspect-ratio: 16/9;
     justify-self: center;
+    position: relative;
+    cursor: pointer;
 }
 
 .portfolio__img {
+    opacity: .6;
+    justify-self: center;
+    background-size: cover;
+    background-blend-mode: multiply;
     transition:
         transform 750ms cubic-bezier(.5, 0, .5, 1),
         opacity 250ms linear;
+}
+
+.project-title {
+    z-index: 5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 3.5em;
+    font-family: var(--ff-third);
+    font-weight: var(--fw-bold);
+    font-family: var(--ff-primary);
+    text-shadow: var(--bs);
+    letter-spacing: 0.25rem;
+    transition:
+        transform 750ms ease-in-out,
+        opacity 250ms linear;
+}
+
+.project-title:hover {
+    transform: translate(-5%, -50%);
+
 }
 
 .portfolio__item:focus {
@@ -572,5 +612,21 @@ footer {
 
     .section__subtitle--intro {
         text-align: center;
+    }
+
+
+}
+
+@media (max-width:715px) {
+    .project-title {
+        font-size: 3em;
+    }
+}
+
+@media (max-width:580px) {
+    .project-title {
+        font-size: 2em;
+        padding-top: 1em;
+        padding-bottom: 1em;
     }
 }
