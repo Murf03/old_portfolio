@@ -365,7 +365,8 @@ header {
 .infos-logo {
     color: var(--clr-titre);
     font-size: 1.3em;
-    margin-right: 0.5rem;
+    width: 25px;
+    margin-right: .3em;
 }
 
 .section__title--about {
