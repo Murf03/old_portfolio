@@ -42,7 +42,7 @@ html {
 
 }
 
-@media (min-width : 950px) {
+@media (min-width : 920px) {
     :root {
         --fs-h1: 3.75rem;
         --fs-h2: 3.05rem;
@@ -278,6 +278,7 @@ header {
     box-shadow: var(--bs);
 }
 
+
 @media (min-width:680px) {
     /* section {
     max-width: 100%;
@@ -294,7 +295,7 @@ header {
 
     .intro__img {
         grid-area: img;
-        min-width: 250px;
+        min-width: 300px;
         position: relative;
         z-index: 2;
     }
@@ -652,4 +653,101 @@ footer {
         padding-top: 1em;
         padding-bottom: 1em;
     }
+}
+
+
+
+
+
+
+/* Project page */
+
+.prj-img {
+    box-shadow: var(--bs);
+    min-width: 250px;
+}
+
+@media (min-width:680px) {
+    .prj-img {
+        grid-area: img;
+        min-width: 350px;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.portfolio-item-details {
+    font-size: var(--fs-body);
+    color: var(--clr-light);
+    background-color: var(--clr-dark);
+    font-family: var(--ff-secondary);
+    margin: 0 auto;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
+
+.portfolio-item-details p,
+.portfolio-item-details img {
+    max-width: 85%;
+    margin: 0 auto;
+    padding-bottom: 1.2em;
+}
+
+.portfolio-item-details p {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-bottom: 1em;
+    max-width: 1200px;
+}
+
+.lang-box {
+    border: 3px solid var(--clr-light);
+    padding-bottom: 1.25em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+}
+
+.lang-box h3 {
+    margin-left: .3em;
+    text-decoration: underline;
+    line-height: 1em;
+
+}
+
+.slider-section {
+    display: grid;
+    justify-content: center;
+    justify-self: center;
+    margin-top: 2.5em;
+}
+
+.slider-section video {
+    justify-content: center;
+    justify-self: center;
+    max-height: 600px;
+    max-width: 500;
+}
+
+.navigation {
+    display: block;
+    justify-content: center;
+    justify-self: center;
+    cursor: pointer;
+}
+
+.navigation a:hover {
+    opacity: 1;
+}
+
+.navigation a img {
+    justify-content: center;
+    justify-self: center;
+    width: 80px;
+    transition: 0.5s;
+}
+
+.navigation a img:hover {
+    width: 110px;
+    opacity: 1;
+    transition: 0.5s;
 }
