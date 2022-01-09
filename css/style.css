@@ -469,20 +469,21 @@ footer {
 }
 
 .portfolio__item {
-    background: #7699d4;
     overflow: hidden;
     max-width: 510px;
     aspect-ratio: 16/9;
     justify-self: center;
     position: relative;
     cursor: pointer;
+    margin-bottom: 1.5em;
+    margin-left: .5em;
+    margin-right: .5em;
 }
 
 .portfolio__img {
-    opacity: .6;
+    opacity: .9;
     justify-self: center;
     background-size: cover;
-    background-blend-mode: multiply;
     transition:
         transform 750ms cubic-bezier(.5, 0, .5, 1),
         opacity 250ms linear;
@@ -494,32 +495,66 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #ffffff;
-    font-size: 3.5em;
+    color: var(--clr-titre);
+    font-size: 2em;
+    line-height: 3rem;
     font-family: var(--ff-third);
     font-weight: var(--fw-bold);
     font-family: var(--ff-primary);
-    text-shadow: var(--bs);
+    text-shadow: var(--clr-dark) 1px 1px;
     letter-spacing: 0.25rem;
     transition:
         transform 750ms ease-in-out,
         opacity 250ms linear;
 }
 
-.project-title:hover {
+/* .project-title:hover {
     transform: translate(-5%, -50%);
 
-}
+} */
 
-.portfolio__item:focus {
+/* .portfolio__item:focus {
     position: relative;
     z-index: 2;
-}
+} */
 
-.portfolio__img:hover,
+/* .portfolio__img:hover,
 .portfolio__item:focus .portfolio__img {
     transform: scale(1.2);
-    opacity: 0.8;
+    opacity: 1;
+} */
+
+.portfolio__item:focus .portfolio__img,
+.portfolio__item:hover .portfolio__img {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.portfolio__item:focus .project-title,
+.portfolio__item:hover .project-title {
+    transform: translate(-5%, -50%);
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 100px;
+    background-color: transparent;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext,
+.tooltip:focus .tooltiptext {
+    visibility: visible;
+    transition-delay: 500ms;
 }
 
 /* .fab {
@@ -581,11 +616,6 @@ footer {
     opacity: 0.75;
 }
 
-
-/* .social__item+.social__item {
-    margin-left: 2.5em;
-} */
-
 .le-cv {
     display: none;
 }
@@ -617,15 +647,8 @@ footer {
 
 }
 
-@media (max-width:715px) {
-    .project-title {
-        font-size: 3em;
-    }
-}
-
 @media (max-width:580px) {
     .project-title {
-        font-size: 2em;
         padding-top: 1em;
         padding-bottom: 1em;
     }
