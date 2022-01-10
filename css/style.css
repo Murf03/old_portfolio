@@ -363,6 +363,7 @@ header {
     text-decoration: none;
     padding-left: .25em;
     padding-right: .25em;
+    cursor: default;
 }
 
 .formation {
